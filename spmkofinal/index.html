@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy - Your One-Stop Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ShopEasy</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#featured">Shop</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#newsletter">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="user">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="auth-buttons" id="auth-buttons">
+                    <button class="btn-login" id="btn-login">Login</button>
+                    <button class="btn-register" id="btn-register">Register</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Cart Modal -->
+<div class="cart-modal" id="cart-modal">
+    <div class="cart-content">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="close-cart" class="close-cart">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="checkout-btn btn-primary">Checkout</button>
+        </div>
+    </div>
+</div>
+
+<!-- Checkout Modal -->
+<div class="checkout-modal" id="checkout-modal" style="display: none;">
+    <div class="checkout-content">
+        <button id="close-checkout" class="close-checkout">&times;</button>
+        <h2>Checkout</h2>
+        <form id="checkout-form"></form>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div class="success-modal" id="success-modal" style="display: none;">
+    <div class="success-content">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h2>Thank You!</h2>
+        <p>Your order has been placed successfully.</p>
+        <button id="continue-shopping" class="btn-primary">Continue Shopping</button>
+    </div>
+</div>
+
+
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Summer Sale</h2>
+                <h1>Up to 70% Off</h1>
+                <p>Shop the latest trends at amazing prices!</p>
+                <button class="btn-primary">Shop Now</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="featured" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <p>Check out our top picks for you</p>
+            </div>
+            <div class="featured-products" id="featured-products">
+                <div class="loader" id="loader">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop by Category</h2>
+                <p>Browse our wide range of products</p>
+            </div>
+            <div class="category-list" id="categories-container">
+                <!-- Categories will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <section class="sale-banner">
+        <div class="container">
+            <div class="sale-content">
+                <h2>Limited Time Offer</h2>
+                <h3>Special Collection</h3>
+                <p>Get the best deals before they're gone!</p>
+                <button class="btn-secondary">View Collection</button>
+            </div>
+        </div>
+    </section>
+       <!-- About Section -->
+<section id="about" style="padding: 80px 0; background-color: #fff;">
+    <div class="container">
+        <div class="section-header">
+            <h2>About ShopEasy</h2>
+            <p>At ShopEasy, we believe shopping should be simple, affordable, and fun.</p>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center; color: #555;">
+            <p>
+                We are a passionate team dedicated to providing you with high-quality products at competitive prices. 
+                From the latest fashion to everyday essentials, we curate our catalog to meet your lifestyle needs.
+            </p>
+            <p>
+                Since our launch, thousands of satisfied customers have trusted us for their online shopping. 
+                With secure payments, fast delivery, and exceptional support, we aim to make your experience seamless.
+            </p>
+            <p>
+                Thank you for choosing ShopEasy. We’re here to make your shopping journey better every day.
+            </p>
+        </div>
+    </div>
+
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get updates on new products and special promotions</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button class="btn-primary">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+</section>
+
+   
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ShopEasy</h3>
+                    <p>Your one-stop shop for all your needs. Quality products at affordable prices.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#featured">Shop</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#newsletter">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope"></i> info@shopeasy.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShopEasy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
+ 

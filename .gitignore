@@ -1,0 +1,90 @@
+# Environment and Configuration
+config.php
+config.local.php
+.env
+.env.local
+.env.*.local
+
+# Database
+*.sql.backup
+*.sql~
+database_backups/
+
+# Logs
+*.log
+logs/
+checkout_debug.log
+register_debug.log
+
+# Temporary files
+tmp/
+temp/
+cache/
+
+# User uploads
+uploads/
+user_uploads/
+product_images/
+
+# Session files
+sessions/
+*.sess
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Composer
+/vendor/
+composer.lock
+composer.phar
+
+# Node modules (if using npm for frontend assets)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Build files
+dist/
+build/
+*.min.js
+*.min.css
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# PHP specific
+*.cache
+.phpunit.result.cache
+
+# Sensitive information
+private/
+secrets/
+*.pem
+*.key
+*.cert
+
+# Error logs
+error_log
+php_errors.log
+
+# Payment gateway credentials
+esewa_config.php
+payment_secrets.php
